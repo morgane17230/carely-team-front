@@ -1,0 +1,117 @@
+@use 'reset';
+@use 'vars' as v;
+
+.sub {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 10vh;
+    &__title {
+        padding: 2rem;
+        font-size: 2rem;
+        color: v.$color-base;
+        @media (max-width: 768px) {
+            padding: 2rem;
+            font-size: 1.5rem;
+        }
+    }
+    &__form {
+        display: flex;
+        width: 50%;
+        height: 60vh;
+        justify-content: space-between;
+        padding: 2rem 2rem;
+        border: 2px solid v.$color-base;
+        background-color: #3a7bc588;
+        border-radius: 5px 100px;
+        @media (max-width: 768px) {
+            padding: 2rem 1rem;
+            width: 90%;
+            flex-direction: column;
+            justify-content: space-between;
+            height: fit-content;
+        }
+        &-cgu {
+            span {
+                color: white;
+            }
+            &-link {
+           color: v.$color-base;
+           font-weight: bold;
+        }
+        }
+        
+        &-left {
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+            width: 50%;
+            justify-content: space-evenly;
+            @media (max-width: 768px) {
+                padding: 0.5rem;
+                width: 90%;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 50vh;
+            }
+        }
+
+        &-right {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            padding: 2rem;
+            border-left: 1px solid white;
+            justify-content: space-between;
+            @media (max-width: 768px) {
+                padding: 0.5rem;
+                width: 90%;
+                border-left: none;
+                flex-direction: column;
+                justify-content: space-between;
+                height: fit-content;
+            }
+        }
+        &-infos {
+            display: flex;
+            flex-direction: column;
+            span {
+                padding: 1rem 0;
+                color: v.$color-base;
+            }
+        }
+        &-input {
+            @include v.input;
+            display: flex;
+            button {
+                background-color: transparent;
+                border: none;
+            }
+        }
+        &-button {
+            @include v.small-button;
+            margin-top: 2rem;
+            width: 30%;
+            height: 2.5rem;
+            font-size: 1rem;
+            align-self: center;
+            @media (max-width: 768px) {
+                align-self: center;
+                width: 80%;
+                height: 5vh;
+                font-size: 0.8rem;
+            }
+        }
+    }
+}
+
+.password-container {
+    display: flex;
+    button {
+        background-color: transparent;
+        border: none;
+    }
+}
+

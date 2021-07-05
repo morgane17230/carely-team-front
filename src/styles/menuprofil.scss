@@ -1,0 +1,36 @@
+@use 'reset';
+@use 'vars' as v;
+
+.menu {
+    display: flex;
+    width: 100%;
+    &__nav {
+        display: flex;
+        width: 100%;
+        background-color: v.$color-base;
+        &-item {
+            display: flex;
+            width: 25%;
+            height: 100%;
+            color: white;
+            align-items: center;
+            margin-top: 1rem;
+            & * {
+                width: 100%;
+                font-size: 1.2rem;
+                padding: 1.5rem;
+                @media (max-width: 768px) {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+.active {
+    display: block;
+    padding: 1.5rem;
+    color: v.$color-base;
+    border-radius: 20px 20px 0 0;
+    background-color: white;
+}

@@ -1,0 +1,32 @@
+@use 'reset';
+@use 'vars' as v;
+
+.contact {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding-top: 2%;
+    align-items: center;
+    @media (max-width: 768px) {
+        padding-bottom: 5rem;
+        width: 90%;
+    }
+
+    &__header {
+        display: flex;
+        align-self: flex-start;
+        align-items: center;
+        color: v.$color-base;
+        font-size: 1rem;
+    }
+    h1 {
+        text-align: center;
+        color: v.$color-base;
+        font-size: 2rem;
+        padding-bottom: 2.5rem;
+        @media (max-width: 768px) {
+            font-size: 1.5rem;
+            padding-bottom: 2rem; 
+        }
+    }
+}

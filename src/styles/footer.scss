@@ -1,0 +1,22 @@
+@use 'reset';
+@use 'vars' as v;
+
+.footer {
+    display: flex;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    padding: 1rem;
+    background-color: v.$color-base;
+    &__ul {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    &__li {
+        color: white;
+        @media (max-width: 768px) {
+            font-size: .8rem;
+        }
+    }
+}

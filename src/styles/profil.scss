@@ -1,0 +1,120 @@
+@use 'reset';
+@use 'vars' as v;
+
+.profil {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    &__title {
+        padding: 2rem;
+        font-size: 2rem;
+        color: v.$color-base;
+    }
+    &__container { 
+        display: flex;
+        padding: 2rem;
+        width: 100%;
+        justify-content: space-between;
+        @media (max-width: 768px) {
+            padding: 1rem;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+        &-part {
+            &-left {
+                display: flex;
+                flex-direction: column;
+                width: 30%;
+                height: 50vh;
+                padding: 2rem;
+                justify-content: space-between;
+                background-color: v.$bg-blue;
+                border-radius: 5px 100px;
+                border: 2px solid v.$color-base;
+                color: v.$color-base;
+                font-size: 1rem;
+                @media (max-width: 768px) {
+                    width: 100%;
+                    padding: 2rem 1rem;
+                }
+            }
+            &-right {
+                display: flex;
+                flex-direction: column;
+                width: 50%;
+                height: 70vh;
+                // justify-content: space-evenly;
+                &-title {
+                    display: flex;
+                    width: 100%;
+                    font-size: 2rem;
+                    padding: 2rem 0;
+                    border-bottom: 2px solid v.$color-base;
+                    color: v.$color-base;
+                }
+                &-infos {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    height: 30%;
+                    align-items: flex-start;
+                    width: 80%;
+                    padding: 2rem 0;
+                    @media (max-width: 768px) {
+                        width: 100%;
+                    }
+                    &-item {
+                        display: flex;
+                        width: 100%;
+                        span {
+                            display: flex;
+                            width: 30%;
+                            @media (max-width: 768px) {
+                                width: 50%;
+                            }
+                        }
+                    }
+                }
+                @media (max-width: 768px) {
+                    width: 100%;
+                }
+            }
+            &-item {
+                display: flex;
+                width: 70%;
+                justify-content: space-between;
+                align-items: center;
+                form {
+                    width: 40%;
+                    justify-self: center;
+                }
+                span {
+                    width: 30%;
+                }
+                button {
+                    background-color: transparent;
+                    border: none;
+                }
+            }
+            &-buttons {
+                display: flex;
+                height: fit-content;
+            }
+            &-button {
+                @include v.small-button;
+                width: 50%;
+                font-size: 1rem;
+                @media (max-width: 768px) {
+                    width: 50%;
+                    height: 6vh;
+                    font-size: 0.8rem;
+                }
+                span {
+                    padding: 0.5rem;
+                }
+            }
+        }
+    }
+}

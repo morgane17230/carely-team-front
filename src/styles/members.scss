@@ -1,0 +1,14 @@
+@use 'reset';
+@use 'vars' as v;
+
+.members {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 4rem;
+    @include v.list;
+}
+.list__content-emails {
+    height: 45vh;
+    overflow-y: auto;
+}

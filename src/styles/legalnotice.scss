@@ -1,0 +1,49 @@
+@use 'reset';
+@use 'vars' as v;
+
+.legalnotice {
+     display: flex;
+    width: 80%;
+    flex-direction: column;
+    margin-top: 2%;
+    background-color: v.$bg-blue;
+    padding: 2rem;
+    border-radius: 20px;
+    line-height: 1.3rem;
+    margin-bottom: 5rem;
+    @media (max-width: 768px) {
+        margin-top: 6%;
+        width: 90%;
+    }
+    &__header {
+        display: flex;
+        align-self: flex-start;
+        align-items: center;
+        color: white;
+    }
+    &__title {
+        color: v.$color-base;
+        padding: 1rem;
+        font-size: 1.7rem;
+        align-self: center;
+        @media (max-width: 768px) {
+            font-size: 1.5rem;
+        }
+    }
+    &__sub-title {
+        color: v.$color-base;
+        padding: 0.5rem 1rem;
+        margin: 2rem 0;
+        font-size: 1.2rem; 
+        background-color: white;
+        border-radius: 20px;
+        @media (max-width: 768px) {
+            font-size: 1rem;
+            width: 100%;
+        }
+    }
+    &__article {
+        text-align: justify;
+        font-size: .8rem;
+    }
+}
